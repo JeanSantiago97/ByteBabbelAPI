@@ -10,8 +10,6 @@ namespace ByteBabbelAPI.Mappings
         {
             //Mapeamento para a tabela Matricula N_to_N
             builder.HasKey(m => new { m.AlunoID, m.TurmaID });
-
-
         }
     }
 }

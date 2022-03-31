@@ -15,6 +15,5 @@ namespace ByteBabbelAPI.Data.Dtos
         public string Nome { get; set; }
         [Required(ErrorMessage = "O campo Email é obrigatório")]
         public string Email { get; set; }
-
     }
 }

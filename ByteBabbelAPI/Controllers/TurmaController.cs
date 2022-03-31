@@ -42,8 +42,6 @@ namespace ByteBabbelAPI.Controllers
         [HttpPut(("Alterar Turma"))]
         public IActionResult AlterarTurma(int numero, [FromBody] UpdateTurmaDto novaTurma)
         {
-
-
             //Não pode mudar para o nome de uma turma já existente.
             Turma _turma = context.Turmas.FirstOrDefault(_turma => _turma.Numero == novaTurma.Numero);
             if (_turma != null) return NotFound($"Já existe uma turma com o numero {novaTurma.Numero}!");
@@ -95,7 +93,6 @@ namespace ByteBabbelAPI.Controllers
             //Verificar se a turma tem alunos
             Matricula _matricula = context.Matriculas.FirstOrDefault(_matricula => _matricula.TurmaID == _turma.ID);
             if (_matricula != null) return BadRequest("Turma tem alunos, não pode ser deletada.");
-
 
             context.Turmas.Remove(_turma);
             context.SaveChanges();

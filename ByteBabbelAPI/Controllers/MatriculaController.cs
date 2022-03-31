@@ -24,7 +24,6 @@ namespace ByteBabbelAPI.Controllers
         [HttpPost("Adicionar Matricula")]
         public IActionResult AdicionarMatricula(string alunoCpf, int numeroTurma)
         {
-
             //Validar se o aluno e turma existe
             Aluno _aluno = context.Alunos.FirstOrDefault(_aluno => _aluno.Cpf == alunoCpf);
             Turma _turma = context.Turmas.FirstOrDefault(_turma => _turma.Numero == numeroTurma);
@@ -69,7 +68,6 @@ namespace ByteBabbelAPI.Controllers
 
             //Remover o aluno da turma
             context.Matriculas.Remove(_matricula);
-
 
             context.SaveChanges();
             return NoContent();

@@ -9,7 +9,6 @@ using System.Linq;
 
 namespace ByteBabbelAPI.Controllers
 {
-
     [ApiController]
     [Route("[Controller]")]
     public class AlunoController : ControllerBase
@@ -87,7 +86,6 @@ namespace ByteBabbelAPI.Controllers
                 context.SaveChanges();
             }
 
-
             _mapper.Map(novoAluno, _aluno);
             context.SaveChanges();
             return NoContent();
@@ -102,7 +100,6 @@ namespace ByteBabbelAPI.Controllers
             //Remover o aluno das turmas e da Matricula
             var alunoMat = context.Matriculas.Where(m => m.Aluno.ID == _aluno.ID).ToList();
             foreach (var mat in alunoMat) context.Matriculas.Remove(mat);
-
 
             context.Alunos.Remove(_aluno);
             context.SaveChanges();

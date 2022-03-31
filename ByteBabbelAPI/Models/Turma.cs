@@ -14,7 +14,6 @@ namespace ByteBabbelAPI.Models
         [Required(ErrorMessage = "O campo Anoletivo é obrigatório")]
         public int Anoletivo { get; set; }
 
-
         public ICollection<Matricula> Matriculas { get; set; }
 
     }

@@ -16,13 +16,10 @@ namespace ByteBabbelAPI.Models
         [ForeignKey("TurmaID")]
         public int TurmaID { get; set; }
 
-
         [Required]
         public Aluno Aluno { get ; set; }
         [Required]
         public Turma Turma { get; set; }
-
-
     }
     
 }

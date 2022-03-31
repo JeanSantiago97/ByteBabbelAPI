@@ -17,6 +17,5 @@ namespace ByteBabbelAPI.Models
         public string Email { get; set; }
 
         public ICollection<Matricula> Matriculas { get; set; }
-
     }
 }
